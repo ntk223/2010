@@ -2,7 +2,6 @@
 .agents/
 .aws/
 .codex/
-.github/
 .opencode/
 .v-skills/
 v-agent-debug.log
