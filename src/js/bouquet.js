@@ -1,6 +1,7 @@
 export function initBouquet() {
   const container = document.getElementById('bouquet');
   if (!container) return;
+  const assetBase = import.meta.env.BASE_URL;
 
   const petals = Array.from({ length: 12 }, (_, index) => {
     const positions = [
@@ -17,7 +18,7 @@ export function initBouquet() {
 
   container.innerHTML = `
     <div class="bouquet-art" role="img" aria-label="Bó hoa nhiều màu được gói giấy xanh đậm">
-      <img class="bouquet-illustration" src="/images/bouquet2.svg" alt="" draggable="false" />
+      <img class="bouquet-illustration" src="${assetBase}images/bouquet2.svg" alt="" draggable="false" />
       <div class="bouquet-petals" aria-hidden="true">${petals}</div>
       <div class="art-lace" aria-hidden="true"></div>
     </div>`;

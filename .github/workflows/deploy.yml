@@ -24,11 +24,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      # BASE_PATH = tên repo (xem README: đổi nếu tên repo khác "2010")
+      - id: pages
+        uses: actions/configure-pages@v5
       - run: npm run build
         env:
-          BASE_PATH: /${{ github.event.repository.name }}/
-      - uses: actions/configure-pages@v5
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
