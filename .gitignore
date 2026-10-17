@@ -1,0 +1,14 @@
+# Hidden tool / config directories
+.agents/
+.aws/
+.codex/
+.github/
+.opencode/
+.v-skills/
+v-agent-debug.log
+
+# Build outputs
+dist/
+
+# Dependencies
+node_modules/

@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no">
+
+<title>Flowers For You ♡</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+    background:#000;
+    font-family:Georgia, "Times New Roman", serif;
+}
+
+
+/* =========================================================
+   MAIN STAGE
+========================================================= */
+
+.stage{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background:#000;
+}
+
+
+/* =========================================================
+   NIGHT BACKGROUND
+========================================================= */
+
+.night{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 57%,
+            rgba(113,75,170,.28) 0%,
+            rgba(61,45,103,.20) 17%,
+            rgba(18,22,48,.55) 38%,
+            #03040c 72%,
+            #000 100%
+        );
+
+    opacity:0;
+
+    transition:
+        opacity 1.5s ease;
+}
+
+.night.show{
+    opacity:1;
+}
+
+
+/* =========================================================
+   HORIZON GLOW
+========================================================= */
+
+.horizon{
+    position:absolute;
+
+    width:150%;
+    height:35%;
+
+    left:-25%;
+    bottom:4%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(101,87,180,.38) 0%,
+            rgba(66,64,126,.18) 35%,
+            transparent 70%
+        );
+
+    filter:blur(25px);
+
+    transform:rotate(-1deg);
+}
+
+
+/* =========================================================
+   MOON
+========================================================= */
+
+.moon{
+    position:absolute;
+
+    width:22px;
+    height:22px;
+
+    top:8%;
+    right:8%;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:
+        0 0 10px #fff,
+        0 0 24px rgba(255,255,255,.8),
+        0 0 55px rgba(180,190,255,.4);
+
+    opacity:0;
+
+    transition:
+        opacity 1.5s ease;
+}
+
+.night.show .moon{
+    opacity:1;
+}
+
+
+/* =========================================================
+   STARS
+========================================================= */
+
+.stars{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    box-shadow:
+        0 0 5px rgba(255,255,255,.8);
+
+    opacity:.7;
+
+    animation:
+        starMove linear infinite;
+}
+
+.star.big{
+    width:3px;
+    height:3px;
+
+    box-shadow:
+        0 0 9px rgba(255,255,255,1);
+}
+
+@keyframes starMove{
+
+    0%{
+        transform:
+            translate(-20px,-20px)
+            rotate(0deg);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:.85;
+    }
+
+    70%{
+        opacity:.65;
+    }
+
+    100%{
+        transform:
+            translate(
+                110vw,
+                72vh
+            )
+            rotate(180deg);
+
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro{
+    position:absolute;
+    inset:0;
+
+    z-index:20;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    background:#000;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+.intro.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   TAP TEXT
+========================================================= */
+
+.tap-text{
+    position:absolute;
+
+    top:27%;
+
+    color:#e9b8ff;
+
+    font-family:
+        "Trebuchet MS",
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(10px,1.4vw,15px);
+
+    font-weight:bold;
+
+    letter-spacing:2.5px;
+
+    text-shadow:
+        0 0 8px rgba(213,125,255,.8);
+
+    animation:
+        textPulse 2s ease-in-out infinite;
+}
+
+@keyframes textPulse{
+
+    0%,100%{
+        opacity:.55;
+    }
+
+    50%{
+        opacity:1;
+    }
+}
+
+
+/* =========================================================
+   HEART
+========================================================= */
+
+.heart-button{
+    position:relative;
+
+    width:
+        clamp(95px,14vw,155px);
+
+    height:
+        clamp(95px,14vw,155px);
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    -webkit-tap-highlight-color:transparent;
+
+    animation:
+        heartBeat 2s ease-in-out infinite;
+}
+
+.heart{
+    position:relative;
+
+    width:58%;
+    height:58%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f08aff,
+            #a93be8 60%,
+            #6d20a9
+        );
+
+    transform:
+        rotate(-45deg);
+
+    border-radius:
+        12px 0 12px 0;
+
+    box-shadow:
+        0 0 12px #c54cff,
+        0 0 30px rgba(185,67,255,.8),
+        0 0 70px rgba(131,39,190,.55);
+}
+
+.heart::before,
+.heart::after{
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f08aff,
+            #a93be8 60%,
+            #6d20a9
+        );
+}
+
+.heart::before{
+    top:-50%;
+    left:0;
+}
+
+.heart::after{
+    left:50%;
+    top:0;
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.09);
+    }
+}
+
+
+/* =========================================================
+   BOUQUET SCENE
+========================================================= */
+
+.bouquet-scene{
+    position:absolute;
+    inset:0;
+
+    z-index:5;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:
+        opacity 1s ease;
+}
+
+.bouquet-scene.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.flowers-title{
+    position:absolute;
+
+    top:
+        clamp(8%,10vh,13%);
+
+    width:100%;
+
+    text-align:center;
+
+    color:#d990ff;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-style:italic;
+
+    font-weight:bold;
+
+    font-size:
+        clamp(23px,4vw,43px);
+
+    text-shadow:
+        0 0 8px rgba(211,124,255,.8),
+        0 0 20px rgba(142,60,188,.55);
+
+    opacity:0;
+
+    transform:
+        translateY(-15px);
+
+    transition:
+        opacity 1.3s ease,
+        transform 1.3s ease;
+}
+
+.bouquet-scene.show .flowers-title{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   BOUQUET VIDEO
+========================================================= */
+
+.bouquet-video-wrap{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:
+        min(75vw,430px);
+
+    height:
+        min(58vh,430px);
+
+    /*
+       Start almost at full size and slightly lower.
+       This creates a soft fade/float-in instead of a sudden pop.
+    */
+    transform:
+        translate(-50%,calc(-50% + 18px))
+        scale(.94);
+
+    opacity:0;
+
+    transition:
+        opacity 2.2s ease,
+        transform 2.2s cubic-bezier(.22,.61,.36,1);
+
+    z-index:5;
+}
+
+.bouquet-video-wrap.show{
+
+    opacity:1;
+
+    transform:
+        translate(-50%,-50%)
+        scale(1);
+}
+
+
+/* actual video */
+
+.bouquet-video{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+
+    filter:
+        drop-shadow(
+            0 15px 30px rgba(0,0,0,.65)
+        );
+
+    border:none;
+    outline:none;
+}
+
+
+/* =========================================================
+   VIDEO LOADING FADE
+========================================================= */
+
+.bouquet-video-wrap video{
+    opacity:0;
+
+    transition:
+        opacity 1.8s ease;
+}
+
+.bouquet-video-wrap.video-ready video{
+    opacity:1;
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope-wrap{
+
+    position:absolute;
+
+    left:50%;
+
+    /*
+       Keep the envelope close to the lower part of the bouquet
+       instead of placing it near the very bottom of the screen.
+    */
+    bottom:
+        clamp(14%,18vh,22%);
+
+    width:
+        clamp(125px,18vw,185px);
+
+    height:
+        clamp(85px,12vw,125px);
+
+    transform:
+        translateX(-50%)
+        translateY(80px)
+        scale(.8);
+
+    opacity:0;
+
+    z-index:15;
+
+    cursor:pointer;
+
+    pointer-events:none;
+
+    transition:
+        opacity 1s ease,
+        transform 1s
+        cubic-bezier(.17,.89,.32,1.25);
+}
+
+.envelope-wrap.show{
+
+    opacity:1;
+
+    transform:
+        translateX(-50%)
+        translateY(0)
+        scale(1);
+
+    pointer-events:auto;
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope{
+
+    position:absolute;
+
+    inset:0;
+
+    background:#f1a9d2;
+
+    border-radius:5px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.55),
+        0 0 20px rgba(229,123,255,.22);
+
+    overflow:hidden;
+}
+
+
+/* bottom flap */
+
+.envelope::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:72%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e88fbe,
+            #d97cae
+        );
+
+    clip-path:
+        polygon(
+            0 0,
+            50% 60%,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+}
+
+
+/* top flap */
+
+.flap{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:70%;
+
+    background:#f7b9dc;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 75%
+        );
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform .9s
+        cubic-bezier(.7,0,.2,1);
+
+    z-index:4;
+}
+
+
+/* opened */
+
+.envelope-wrap.open .flap{
+
+    transform:
+        rotateX(180deg);
+}
+
+
+/* =========================================================
+   ENVELOPE GLOW
+========================================================= */
+
+.envelope-wrap::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-12px;
+
+    border-radius:12px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(218,124,255,.3),
+            transparent 65%
+        );
+
+    z-index:-1;
+
+    opacity:0;
+
+    animation:
+        envelopeGlow 2s ease-in-out infinite;
+}
+
+@keyframes envelopeGlow{
+
+    0%,100%{
+        opacity:.25;
+        transform:scale(.9);
+    }
+
+    50%{
+        opacity:.8;
+        transform:scale(1.1);
+    }
+}
+
+
+/* =========================================================
+   CARD OVERLAY
+========================================================= */
+
+.card-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:30;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    background:
+        rgba(0,0,0,.45);
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+.card-overlay.show{
+
+    opacity:1;
+    visibility:visible;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.card{
+
+    position:relative;
+
+    width:
+        min(88vw,440px);
+
+    max-height:
+        88vh;
+
+    padding:
+        clamp(20px,4vw,32px);
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff0fa,
+            #f8d9ee
+        );
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.75),
+        0 0 45px rgba(215,119,255,.35);
+
+    transform:
+        translateY(140px)
+        scale(.65)
+        rotate(-3deg);
+
+    opacity:0;
+
+    transition:
+        transform .9s
+        cubic-bezier(.17,.89,.32,1.28),
+        opacity .7s ease;
+
+    overflow:auto;
+}
+
+.card-overlay.show .card{
+
+    transform:
+        translateY(0)
+        scale(1)
+        rotate(0deg);
+
+    opacity:1;
+}
+
+
+/* =========================================================
+   CARD BORDER
+========================================================= */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:9px;
+
+    border:
+        1px solid
+        rgba(155,69,164,.3);
+
+    border-radius:12px;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   CARD TOP TEXT
+========================================================= */
+
+.card-top{
+
+    position:relative;
+
+    text-align:center;
+
+    color:#8e45a4;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(20px,4vw,29px);
+
+    font-style:italic;
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+    padding:0 10px;
+}
+
+
+/* subtitle */
+
+.card-subtitle{
+
+    position:relative;
+
+    text-align:center;
+
+    color:#a66a9f;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(10px,2vw,13px);
+
+    letter-spacing:1.5px;
+
+    margin-bottom:18px;
+}
+
+
+/* =========================================================
+   GIFT ANIMATION AREA
+========================================================= */
+
+.gift-frame{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    border-radius:14px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #30203b,
+            #130d18 70%,
+            #090609
+        );
+
+    border:
+        2px solid
+        rgba(151,72,164,.35);
+
+    box-shadow:
+        inset 0 0 30px rgba(0,0,0,.55),
+        0 8px 20px rgba(90,30,90,.18);
+}
+
+
+/* actual gift animation */
+
+.gift-frame img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+
+/* =========================================================
+   GIFT PLACEHOLDER
+========================================================= */
+
+.gift-placeholder{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:#d9a5d5;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size:
+        clamp(11px,2.2vw,14px);
+
+    letter-spacing:1px;
+
+    pointer-events:none;
+}
+
+.gift-frame.has-gift
+.gift-placeholder{
+
+    display:none;
+}
+
+
+/* =========================================================
+   CARD BOTTOM
+========================================================= */
+
+.card-bottom{
+
+    position:relative;
+
+    text-align:center;
+
+    color:#87468f;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(16px,3vw,22px);
+
+    font-style:italic;
+
+    line-height:1.5;
+
+    margin-top:17px;
+
+    padding:0 15px;
+}
+
+
+/* =========================================================
+   CLOSE
+========================================================= */
+
+.close-card{
+
+    position:absolute;
+
+    top:13px;
+    right:15px;
+
+    z-index:10;
+
+    width:27px;
+    height:27px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        rgba(126,65,132,.13);
+
+    color:#82448d;
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:600px){
+
+    .moon{
+
+        width:15px;
+        height:15px;
+
+        top:7%;
+        right:8%;
+    }
+
+    .tap-text{
+
+        top:30%;
+
+        letter-spacing:2px;
+    }
+
+    .bouquet-video-wrap{
+
+        width:88vw;
+
+        height:52vh;
+    }
+
+    .flowers-title{
+
+        top:12%;
+
+        font-size:26px;
+    }
+
+    .envelope-wrap{
+
+        bottom:16%;
+    }
+
+    .card{
+
+        width:90vw;
+
+        max-height:82vh;
+
+        padding:
+            22px 18px;
+    }
+
+    .card-top{
+
+        margin-top:5px;
+    }
+
+    .gift-frame{
+
+        aspect-ratio:1/1;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .bouquet-video-wrap{
+
+        width:94vw;
+
+        height:48vh;
+    }
+
+    .flowers-title{
+
+        font-size:23px;
+    }
+
+    .envelope-wrap{
+
+        width:130px;
+
+        height:88px;
+    }
+
+    .card{
+
+        width:92vw;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONES
+========================================================= */
+
+@media(
+    max-height:550px
+) and (
+    orientation:landscape
+){
+
+    .flowers-title{
+
+        top:7%;
+
+        font-size:24px;
+    }
+
+    .bouquet-video-wrap{
+
+        width:48vw;
+
+        height:78vh;
+    }
+
+    .envelope-wrap{
+
+        width:120px;
+
+        height:80px;
+
+        bottom:8%;
+    }
+
+    .card{
+
+        width:70vw;
+
+        max-height:90vh;
+    }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="stage">
+
+
+<!-- =====================================================
+     NIGHT BACKGROUND
+====================================================== -->
+
+<div class="night">
+
+    <div class="stars" id="stars"></div>
+
+    <div class="horizon"></div>
+
+    <div class="moon"></div>
+
+</div>
+
+
+<!-- =====================================================
+     INTRO
+====================================================== -->
+
+<section
+    class="intro"
+    id="intro">
+
+    <div class="tap-text">
+        TAP TO OPEN
+    </div>
+
+    <button
+        class="heart-button"
+        id="heartButton"
+        aria-label="Open flowers">
+
+        <span class="heart"></span>
+
+    </button>
+
+</section>
+
+
+<!-- =====================================================
+     BOUQUET SCENE
+====================================================== -->
+
+<section
+    class="bouquet-scene"
+    id="bouquetScene">
+
+
+    <!-- TITLE -->
+
+    <div class="flowers-title">
+        Flowers For You
+    </div>
+
+
+    <!-- =================================================
+         BOUQUET VIDEO
+    ================================================== -->
+
+    <div
+        class="bouquet-video-wrap"
+        id="bouquetVideoWrap">
+
+        <!--
+            YOUR BOUQUET VIDEO
+
+            Put your video in the same folder
+            and name it:
+
+            bouquet-video.mp4
+
+            The video will:
+            1. Appear after heart click
+            2. Automatically play
+            3. Play only once
+            4. When finished → envelope appears
+        -->
+
+        <video
+            class="bouquet-video"
+            id="bouquetVideo"
+            muted
+            playsinline
+            preload="auto">
+
+            <source
+                src="flower bloom.mp4"
+                type="video/mp4">
+
+        </video>
+
+    </div>
+
+
+    <!-- =================================================
+         ENVELOPE
+    ================================================== -->
+
+    <div
+        class="envelope-wrap"
+        id="envelopeWrap">
+
+        <div class="envelope">
+
+            <div class="flap"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CARD
+====================================================== -->
+
+<section
+    class="card-overlay"
+    id="cardOverlay">
+
+    <div class="card">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="close-card"
+            id="closeCard">
+
+            ×
+
+        </button>
+
+
+        <!-- TOP TEXT -->
+
+        <div class="card-top">
+            A Little Gift For You ♡
+        </div>
+
+
+        <div class="card-subtitle">
+            made with love
+        </div>
+
+
+        <!-- =================================================
+             GIFT ANIMATION
+        ================================================== -->
+
+        <div
+            class="gift-frame"
+            id="giftFrame">
+
+            <!--
+                YOUR GIFT ANIMATION
+
+                Put your animation in the same folder
+                and name it:
+
+                gift-animation.gif
+            -->
+
+            <img
+                src="gif.gif"
+                id="giftAnimation"
+                alt="Gift Animation">
+
+            <div class="gift-placeholder">
+                Your gift animation will appear here ♡
+            </div>
+
+        </div>
+
+
+        <!-- BOTTOM TEXT -->
+
+        <div class="card-bottom">
+
+            For someone who deserves
+            a little extra love ♡
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   STAR GENERATOR
+========================================================= */
+
+const starsContainer =
+    document.getElementById("stars");
+
+const starCount = 75;
+
+
+for(let i = 0; i < starCount; i++){
+
+    const star =
+        document.createElement("span");
+
+    star.className =
+        "star";
+
+    if(Math.random() > .82){
+
+        star.classList.add("big");
+
+    }
+
+    star.style.left =
+        Math.random() * 100 + "%";
+
+    star.style.top =
+        Math.random() * 65 + "%";
+
+    star.style.animationDuration =
+        (7 + Math.random() * 8) + "s";
+
+    star.style.animationDelay =
+        (-Math.random() * 12) + "s";
+
+    starsContainer.appendChild(star);
+
+}
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const intro =
+    document.getElementById("intro");
+
+const heartButton =
+    document.getElementById("heartButton");
+
+const night =
+    document.querySelector(".night");
+
+const bouquetScene =
+    document.getElementById("bouquetScene");
+
+const bouquetVideoWrap =
+    document.getElementById(
+        "bouquetVideoWrap"
+    );
+
+const bouquetVideo =
+    document.getElementById(
+        "bouquetVideo"
+    );
+
+const envelopeWrap =
+    document.getElementById(
+        "envelopeWrap"
+    );
+
+const cardOverlay =
+    document.getElementById(
+        "cardOverlay"
+    );
+
+const closeCard =
+    document.getElementById(
+        "closeCard"
+    );
+
+const giftAnimation =
+    document.getElementById(
+        "giftAnimation"
+    );
+
+const giftFrame =
+    document.getElementById(
+        "giftFrame"
+    );
+
+
+/* =========================================================
+   STEP 1
+   HEART → BOUQUET VIDEO
+========================================================= */
+
+heartButton.addEventListener(
+    "click",
+    () => {
+
+        /* Prevent clicking twice */
+
+        heartButton.disabled = true;
+
+
+        /* Hide black intro */
+
+        intro.classList.add("hide");
+
+
+        /* Show night background */
+
+        night.classList.add("show");
+
+
+        /* Show bouquet scene */
+
+        bouquetScene.classList.add("show");
+
+
+        /*
+            Small delay:
+            bouquet video pops into the scene.
+        */
+
+        setTimeout(
+            () => {
+
+                bouquetVideoWrap.classList.add(
+                    "show"
+                );
+
+                /*
+                    Start video automatically.
+                */
+
+                bouquetVideo.currentTime = 0;
+
+                bouquetVideo.play()
+                    .then(() => {
+
+                        bouquetVideoWrap.classList.add(
+                            "video-ready"
+                        );
+
+                    })
+                    .catch(() => {
+
+                        /*
+                            If autoplay is blocked,
+                            user interaction already happened,
+                            so try again.
+                        */
+
+                        bouquetVideo.play();
+
+                        bouquetVideoWrap.classList.add(
+                            "video-ready"
+                        );
+
+                    });
+
+            },
+            450
+        );
+
+    }
+);
+
+
+/* =========================================================
+   VIDEO LOADED
+========================================================= */
+
+bouquetVideo.addEventListener(
+    "loadeddata",
+    () => {
+
+        bouquetVideoWrap.classList.add(
+            "video-ready"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   VIDEO FINISHED
+   VIDEO → ENVELOPE
+========================================================= */
+
+bouquetVideo.addEventListener(
+    "ended",
+    () => {
+
+        /*
+            Video has completely finished.
+
+            Now envelope comes up.
+        */
+
+        setTimeout(
+            () => {
+
+                envelopeWrap.classList.add(
+                    "show"
+                );
+
+            },
+            400
+        );
+
+    }
+);
+
+
+/* =========================================================
+   STEP 2
+   ENVELOPE → CARD
+========================================================= */
+
+envelopeWrap.addEventListener(
+    "click",
+    () => {
+
+        /* Open envelope */
+
+        envelopeWrap.classList.add(
+            "open"
+        );
+
+
+        /*
+            Wait for envelope flap
+            animation.
+        */
+
+        setTimeout(
+            () => {
+
+                cardOverlay.classList.add(
+                    "show"
+                );
+
+            },
+            700
+        );
+
+    }
+);
+
+
+/* =========================================================
+   STEP 3
+   CLOSE CARD
+========================================================= */
+
+closeCard.addEventListener(
+    "click",
+    (event) => {
+
+        event.stopPropagation();
+
+        cardOverlay.classList.remove(
+            "show"
+        );
+
+        envelopeWrap.classList.remove(
+            "open"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CHECK GIFT ANIMATION
+========================================================= */
+
+giftAnimation.addEventListener(
+    "load",
+    () => {
+
+        giftFrame.classList.add(
+            "has-gift"
+        );
+
+    }
+);
+
+
+/* =========================================================
+   ERROR IF GIFT IS NOT FOUND
+========================================================= */
+
+giftAnimation.addEventListener(
+    "error",
+    () => {
+
+        giftFrame.classList.remove(
+            "has-gift"
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>

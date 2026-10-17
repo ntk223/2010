@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chúc mừng ngày Phụ nữ Việt Nam 20/10</title>
+  <meta name="description" content="Một tấm thiệp nhỏ gửi ngàn yêu thương đến tất cả phụ nữ nhân ngày 20/10." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-rose-50 via-pink-50 to-rose-100 font-sans text-stone-800 antialiased">
+  <div id="passcode-overlay" role="dialog" aria-modal="true" aria-label="Nhập mật khẩu để mở thiệp"
+    class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-100 to-amber-50 px-4 text-center">
+    <div class="gate-bg pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+      <span class="gate-float" style="--x: 6%; --s: 18px; --d: 17s; --delay: -3s; --o: 0.55; --rot: 42deg"></span>
+      <span class="gate-float gate-float-blush"
+        style="--x: 18%; --s: 12px; --d: 21s; --delay: -11s; --o: 0.7; --rot: -35deg"></span>
+      <span class="gate-float" style="--x: 30%; --s: 22px; --d: 15s; --delay: -7s; --o: 0.4; --rot: 55deg"></span>
+      <span class="gate-float gate-float-glow"
+        style="--x: 42%; --s: 14px; --d: 19s; --delay: -1s; --o: 0.5; --rot: 30deg"></span>
+      <span class="gate-float gate-float-blush"
+        style="--x: 55%; --s: 10px; --d: 23s; --delay: -14s; --o: 0.75; --rot: -48deg"></span>
+      <span class="gate-float" style="--x: 66%; --s: 20px; --d: 16s; --delay: -9s; --o: 0.45; --rot: 38deg"></span>
+      <span class="gate-float gate-float-glow"
+        style="--x: 76%; --s: 16px; --d: 20s; --delay: -5s; --o: 0.55; --rot: -28deg"></span>
+      <span class="gate-float" style="--x: 88%; --s: 24px; --d: 18s; --delay: -12s; --o: 0.4; --rot: 50deg"></span>
+      <span class="gate-float gate-float-blush"
+        style="--x: 94%; --s: 12px; --d: 22s; --delay: -2s; --o: 0.65; --rot: -40deg"></span>
+      <span class="gate-float gate-float-glow"
+        style="--x: 12%; --s: 10px; --d: 24s; --delay: -16s; --o: 0.6; --rot: 25deg"></span>
+      <span class="gate-float" style="--x: 50%; --s: 14px; --d: 14s; --delay: -6s; --o: 0.5; --rot: 45deg"></span>
+      <span class="gate-float gate-float-glow"
+        style="--x: 70%; --s: 12px; --d: 21s; --delay: -18s; --o: 0.5; --rot: -33deg"></span>
+      <div class="gate-shimmer"></div>
+    </div>
+    <div id="passcode-card" class="gate-card relative w-full max-w-xs rounded-3xl p-8 backdrop-blur">
+      <p class="gate-kicker">20 · 10 <span aria-hidden="true">✦</span> THIỆP GỬI YÊU THƯƠNG</p>
+      <div class="gate-lock-seal" aria-hidden="true">
+        <svg viewBox="0 0 48 48" class="h-11 w-11">
+          <defs>
+            <linearGradient id="lockGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e7b94b" />
+              <stop offset="1" stop-color="#d8794c" />
+            </linearGradient>
+          </defs>
+          <path d="M16 20v-5a8 8 0 0 1 16 0v5" fill="none" stroke="url(#lockGrad)" stroke-width="3"
+            stroke-linecap="round" />
+          <rect x="11" y="20" width="26" height="20" rx="6" fill="url(#lockGrad)" />
+          <circle cx="24" cy="29" r="2.6" fill="#fff9e5" />
+          <path d="M24 30.5v4" stroke="#fff9e5" stroke-width="2.4" stroke-linecap="round" />
+        </svg>
+      </div>
+      <p class="gate-title mt-4 font-display text-lg sm:text-xl">Mở món quà yêu thương</p>
+      <p class="gate-subtitle mt-1 text-sm">Nhập mã bí mật để mở tấm thiệp</p>
+      <div id="passcode-dots" aria-hidden="true" class="mt-6 flex justify-center gap-3">
+        <span class="passcode-dot"></span>
+        <span class="passcode-dot"></span>
+        <span class="passcode-dot"></span>
+        <span class="passcode-dot"></span>
+      </div>
+      <p id="passcode-error" role="status" aria-live="polite"
+        class="passcode-feedback mt-3 min-h-5 text-sm font-medium"></p>
+      <div id="passcode-keypad" role="group" aria-label="Bàn phím số" class="mt-6 grid grid-cols-3 gap-3">
+        <button type="button" data-key="1" aria-label="Số 1" class="key-btn">1</button>
+        <button type="button" data-key="2" aria-label="Số 2" class="key-btn">2</button>
+        <button type="button" data-key="3" aria-label="Số 3" class="key-btn">3</button>
+        <button type="button" data-key="4" aria-label="Số 4" class="key-btn">4</button>
+        <button type="button" data-key="5" aria-label="Số 5" class="key-btn">5</button>
+        <button type="button" data-key="6" aria-label="Số 6" class="key-btn">6</button>
+        <button type="button" data-key="7" aria-label="Số 7" class="key-btn">7</button>
+        <button type="button" data-key="8" aria-label="Số 8" class="key-btn">8</button>
+        <button type="button" data-key="9" aria-label="Số 9" class="key-btn">9</button>
+        <button type="button" data-key="backspace" aria-label="Xóa" class="key-btn">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z" />
+            <path d="m18 9-6 6" />
+            <path d="m12 9 6 6" />
+          </svg>
+        </button>
+        <button type="button" data-key="0" aria-label="Số 0" class="key-btn">0</button>
+        <button id="passcode-continue" type="button" aria-label="Tiếp tục mở quà" title="Tiếp tục mở quà"
+          class="key-btn key-btn-continue" disabled>
+          <svg viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true" fill="currentColor">
+            <path d="M12 21s-8.2-4.8-8.2-11A4.7 4.7 0 0 1 12 7.2 4.7 4.7 0 0 1 20.2 10C20.2 16.2 12 21 12 21Z" />
+          </svg>
+        </button>
+      </div>
+      <div id="gate-success" class="hidden" role="status" aria-live="assertive" tabindex="-1">
+        <span class="gate-success-bouquet" aria-hidden="true">💐</span>
+        <p class="font-display text-2xl font-semibold text-[#274850] sm:text-3xl">Mật mã chính xác!</p>
+        <p class="mt-2 text-sm text-[#748064] sm:text-base">Chúc mừng! Món quà yêu thương đang mở ra ✨</p>
+      </div>
+    </div>
+  </div>
+
+  <header id="hero" class="relative overflow-hidden">
+    <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-pink-300/40 blur-3xl"
+      aria-hidden="true"></div>
+    <div class="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-rose-300/40 blur-3xl"
+      aria-hidden="true"></div>
+    <div id="hero-content"
+      class="relative z-10 mx-auto flex min-h-[85vh] max-w-3xl flex-col items-center justify-center px-4 pb-24 pt-20 text-center sm:min-h-screen">
+      <p class="hero-line hero-line-1 font-display text-sm uppercase tracking-[0.3em] text-rose-400">
+        Thiệp gửi yêu thương
+      </p>
+      <h1 class="hero-line hero-line-2 mt-4 font-display text-4xl leading-tight text-rose-600 sm:text-5xl md:text-6xl">
+        <span>Chúc mừng ngày</span>
+        <span>Phụ nữ Việt Nam 20/10</span>
+      </h1>
+      <div id="gift-row" class="hero-line hero-line-3 relative mt-8 w-full max-w-2xl">
+        <div id="bouquet" role="button" tabindex="0"
+          aria-label="Chạm vào bó hoa cẩm chướng gói giấy kraft để nhận cánh hoa"
+          class="mx-auto w-[75%] max-w-sm min-w-0 cursor-pointer rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2">
+        </div>
+        <button id="card" type="button" aria-label="Mở thiệp lời chúc" aria-haspopup="dialog"
+          class="absolute bottom-[7%] right-[4%] z-10 flex w-24 shrink-0 rotate-[7deg] flex-col items-center gap-1 rounded-xl border border-rose-200/80 bg-gradient-to-br from-[#fdf7ec] to-[#f6e2d7] px-2 py-2.5 text-center shadow-xl shadow-rose-200/60 transition hover:-translate-y-1 hover:rotate-[3deg] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2 sm:w-32 sm:px-3 sm:py-3">
+          <svg viewBox="0 0 48 48" class="h-9 w-9 sm:h-11 sm:w-11" aria-hidden="true">
+            <path
+              d="M24 4 C28 3 32 6 33 10 C37 10 41 13 40 17 C43 20 43 25 40 28 C41 32 38 36 34 37 C33 41 28 44 24 43 C20 44 15 41 14 37 C10 36 7 32 8 28 C5 25 5 20 8 17 C7 13 11 10 15 10 C16 6 20 3 24 4 Z"
+              fill="#c96f85" />
+            <circle cx="24" cy="24" r="13" fill="#b25a70" />
+            <path
+              d="M24 30 C21.5 27.5 17 25 17 21.5 C17 18.5 20 17 22 19 L24 21 L26 19 C28 17 31 18.5 31 21.5 C31 25 26.5 27.5 24 30 Z"
+              fill="#fdf3e7" />
+            <circle cx="19" cy="15" r="2" fill="#ffffff" opacity="0.35" />
+          </svg>
+          <span aria-hidden="true" class="h-1.5 w-12 rounded-full bg-rose-100 sm:w-16"></span>
+          <span aria-hidden="true" class="h-1.5 w-8 rounded-full bg-rose-100/80 sm:w-12"></span>
+          <span class="mt-0.5 text-[10px] font-medium uppercase tracking-widest text-rose-400 sm:text-[11px]">Chạm để
+            mở</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section id="flower-crate" aria-labelledby="flower-crate-title">
+    <div class="crate-panel">
+      <p class="crate-kicker">MỘT NIỀM VUI NHO NHỎ</p>
+      <h2 id="flower-crate-title" class="font-display">Hòm hoa yêu thương</h2>
+
+      <div id="crate-window" class="crate-window" aria-label="Vòng quay các bó hoa">
+        <span class="crate-pointer" aria-hidden="true"></span>
+        <div id="crate-track" class="crate-track"></div>
+      </div>
+
+      <div id="crate-result" class="crate-result" role="status" aria-live="polite" hidden>
+        <span id="crate-result-flower" class="crate-result-flower" aria-hidden="true"></span>
+        <div>
+          <p id="crate-result-name" class="crate-result-name"></p>
+          <p id="crate-result-wish" class="crate-result-wish"></p>
+        </div>
+      </div>
+
+      <button id="crate-open" class="crate-open" type="button">
+        <span aria-hidden="true">✿</span> Mở hòm hoa
+      </button>
+      <p class="crate-note">Mỗi lượt mở là một lời chúc bất ngờ 🌷</p>
+    </div>
+  </section>
+
+  <footer id="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-credit">
+        <svg viewBox="0 0 32 20" class="h-5 w-7 text-[#879778] opacity-75" aria-hidden="true" fill="none"
+          stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 17C9 15 13 10 19 3" stroke-width="1.2" />
+          <path d="M6 14C4 10 5 8 8 8c1 3 0 5-2 6ZM11 10C9 6 10 4 13 4c1 3 0 5-2 6ZM15 6c0-3 2-5 5-4-1 3-2 4-5 4Z"
+            fill="currentColor" stroke-width=".7" />
+        </svg>
+        <span>created by <span class="text-rose-400">@NTK</span> &lt;3</span>
+        <button id="share-btn" type="button" aria-label="Chia sẻ thiệp" title="Chia sẻ thiệp"
+          class="inline-flex h-8 w-8 items-center justify-center rounded-full text-rose-400 transition hover:text-rose-600 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2">
+          <svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <path d="m8.7 10.7 6.6-4.4M8.7 13.3l6.6 4.4" />
+          </svg>
+        </button>
+        <svg viewBox="0 0 32 20" class="h-5 w-7 -scale-x-100 text-[#879778] opacity-75" aria-hidden="true"
+          fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 17C9 15 13 10 19 3" stroke-width="1.2" />
+          <path d="M6 14C4 10 5 8 8 8c1 3 0 5-2 6ZM11 10C9 6 10 4 13 4c1 3 0 5-2 6ZM15 6c0-3 2-5 5-4-1 3-2 4-5 4Z"
+            fill="currentColor" stroke-width=".7" />
+        </svg>
+      </div>
+      <p class="hero-signoff mt-2 font-display text-sm italic tracking-wide">Một bó hoa nhỏ, gửi ngàn lời thương</p>
+    </div>
+  </footer>
+
+  <div id="card-modal" role="dialog" aria-modal="true" aria-label="Thiệp lời chúc"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-stone-900/50 p-4 backdrop-blur-sm">
+    <div class="relative w-full max-w-md">
+      <button id="card-close" type="button" aria-label="Đóng thiệp"
+        class="absolute -right-2 -top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl text-stone-600 shadow-md transition hover:bg-[#eef2e8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#638078]">
+        ×
+      </button>
+      <div
+        class="card-sheet relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#fff9e5] via-[#fffdf5] to-[#f5ecd8] shadow-2xl ring-1 ring-[#9cac91]">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-2 rounded-xl border border-[#b9c3a5]"></div>
+        <svg viewBox="0 0 40 40" class="pointer-events-none absolute left-2 top-2 h-8 w-8 text-[#b28a43]"
+          aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round">
+          <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
+          <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
+          <path d="M12 15 C 14 12 18 12 20 15" stroke-width="1.2" opacity="0.7" />
+          <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
+        </svg>
+        <svg viewBox="0 0 40 40" class="pointer-events-none absolute right-2 top-2 h-8 w-8 -scale-x-100 text-[#b28a43]"
+          aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round">
+          <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
+          <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
+          <path d="M12 15 C 14 12 18 12 20 15" stroke-width="1.2" opacity="0.7" />
+          <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
+        </svg>
+        <svg viewBox="0 0 40 40"
+          class="pointer-events-none absolute bottom-2 left-2 h-8 w-8 -scale-y-100 text-[#b28a43]" aria-hidden="true"
+          fill="none" stroke="currentColor" stroke-linecap="round">
+          <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
+          <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
+          <path d="M12 15 C 14 12 18 12 20 15" stroke-width="1.2" opacity="0.7" />
+          <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
+        </svg>
+        <svg viewBox="0 0 40 40" class="pointer-events-none absolute bottom-2 right-2 h-8 w-8 -scale-100 text-[#b28a43]"
+          aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round">
+          <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
+          <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
+          <path d="M12 15 C 14 12 18 12 20 15" stroke-width="1.2" opacity="0.7" />
+          <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
+        </svg>
+        <div class="relative px-6 py-10 sm:px-10">
+          <p class="font-display text-xl text-[#274850] sm:text-2xl">
+            Nhân ngày Phụ nữ Việt Nam 20/10
+          </p>
+          <svg viewBox="0 0 120 12" class="mx-auto my-4 h-3 w-28 text-[#d28a42]" aria-hidden="true" fill="none"
+            stroke="currentColor">
+            <path d="M2 6 H 48" stroke-width="1" opacity="0.55" />
+            <path d="M72 6 H 118" stroke-width="1" opacity="0.55" />
+            <path
+              d="M60 3 C 58.8 1.2 55.8 1.6 55.8 3.8 C 55.8 5.8 60 8.6 60 8.6 C 60 8.6 64.2 5.8 64.2 3.8 C 64.2 1.6 61.2 1.2 60 3 Z"
+              fill="currentColor" stroke="none" />
+          </svg>
+          <p id="card-text" aria-live="polite"
+            class="min-h-40 text-left text-[15px] leading-relaxed text-[#59675b] sm:text-base"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p id="gift-hint" class="gift-hint">Chạm ra ngoài để mở thiệp 🌸</p>
+
+  <div id="marquee" role="marquee" aria-label="Lời chúc ngày Phụ nữ Việt Nam"
+    class="fixed inset-x-0 bottom-0 z-40 overflow-hidden border-t border-white/40 bg-rose-500 py-2 text-xs text-white shadow-[0_-2px_12px_rgba(219,39,119,0.35)]">
+    <p class="marquee-static" aria-hidden="true">Chúc bạn vui vẻ, bình an và hạnh phúc 🌷</p>
+    <div class="marquee-track" aria-hidden="true">
+      <span class="marquee-content">Chúc mừng ngày Phụ nữ Việt Nam 20/10 🌸 Yêu thương 💕 Hạnh phúc 🌷 Bình an ✨</span>
+      <span class="marquee-content">Chúc mừng ngày Phụ nữ Việt Nam 20/10 🌸 Yêu thương 💕 Hạnh phúc 🌷 Bình an ✨</span>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"
+    class="fixed bottom-14 left-1/2 z-50 rounded-full bg-stone-800 px-5 py-2.5 text-sm text-white shadow-lg">
+    Đã sao chép liên kết!
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
