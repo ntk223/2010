@@ -525,6 +525,8 @@
   top: auto;
   right: 5%;
   bottom: 6%;
+  scale: .85;
+  transform-origin: bottom right;
 }
 
 @media (max-width: 520px) {
@@ -1756,13 +1758,13 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 
 #card {
   top: auto;
-  right: 5%;
+  right: calc(5% + 20px);
   bottom: 6%;
 }
 
 @media (max-width: 520px) {
   #gift-row { padding: 0; }
-  #card { top: auto; right: 4%; bottom: 6%; }
+  #card { top: auto; right: calc(4% + 20px); bottom: 6%; }
 }
 
 
