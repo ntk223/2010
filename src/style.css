@@ -1570,8 +1570,8 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 }
 
 .site-footer-inner { width: min(100%, 42rem); margin-inline: auto; }
-.footer-credit { display: flex; align-items: center; justify-content: center; gap: .5rem; color: #52688c; font-size: .75rem; letter-spacing: .025em; }
-#site-footer .hero-signoff { margin-top: .35rem; font-size: .8rem; }
+.footer-credit { display: flex; align-items: center; justify-content: center; gap: .5rem; padding-bottom: 1.35rem; color: #52688c; font-size: .75rem; letter-spacing: .025em; }
+#site-footer .hero-signoff { margin: 0 0 .35rem; font-size: .8rem; }
 
 @media (prefers-reduced-motion: reduce) {
   .crate-result-show { animation: none; }
@@ -1969,6 +1969,46 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 .ntk-note-wrap { position: relative; display: inline-flex; align-items: baseline; }
 .ntk-note-trigger { border: 0; padding: 0; background: transparent; color: #be123c; font: inherit; cursor: pointer; }
 .ntk-note-trigger:focus-visible { border-radius: .2rem; outline: 2px solid #8fa9cc; outline-offset: 2px; }
+.psy-link-wrap { position: relative; display: inline-flex; align-items: baseline; }
+.psy-link-hint {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + .42rem);
+  left: 50%;
+  display: block;
+  padding: .18rem .38rem;
+  border: 1px solid rgba(143,169,204,.3);
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+  box-shadow: 0 2px 7px rgba(51,76,112,.07);
+  color: #74859b;
+  font-size: .54rem;
+  font-weight: 500;
+  line-height: 1.2;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  animation: psy-hint-float 1.8s ease-in-out infinite;
+  pointer-events: none;
+}
+.psy-hint-arrow {
+  position: absolute;
+  bottom: calc(100% - .06rem);
+  left: 50%;
+  color: #bd8593;
+  font-size: .72rem;
+  opacity: .78;
+  line-height: .8;
+  transform: translateX(-50%);
+  animation: psy-arrow-point .85s ease-in-out infinite alternate;
+}
+@keyframes psy-hint-float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 1px); }
+}
+@keyframes psy-arrow-point {
+  from { translate: 0 1px; }
+  to { translate: 0 -1px; }
+}
 .ntk-note:not([hidden]) {
   position: absolute; z-index: 20; left: 50%; bottom: calc(100% + .55rem);
   display: block; padding: .38rem .62rem; border: 1px solid rgba(143,169,204,.55);
@@ -1976,5 +2016,10 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   box-shadow: 0 8px 20px rgba(37,59,121,.16); font-size: .72rem;
   font-weight: 600; white-space: nowrap; transform: translateX(-50%);
   animation: ntk-note-pop .18s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .psy-link-hint,
+  .psy-hint-arrow { animation: none; }
 }
 @keyframes ntk-note-pop { from { opacity: 0; translate: 0 4px; } to { opacity: 1; translate: 0 0; } }
