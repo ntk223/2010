@@ -1,8 +1,8 @@
 const PETAL_COLORS = [
   'rgba(251, 113, 133,',
   'rgba(244, 114, 182,',
-  'rgba(251, 146, 160,',
-  'rgba(249, 168, 212,',
+  'rgba(143, 169, 204,',
+  'rgba(196, 214, 236,',
 ];
 
 function randomBetween(min, max) {

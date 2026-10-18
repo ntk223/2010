@@ -76,8 +76,8 @@
   display: grid;
   place-items: center;
   transform: scale(1.035);
-  background: #fff9e5;
-  box-shadow: 0 24px 70px rgba(39,72,80,.2), 0 0 0 1px rgba(180,123,45,.38);
+  background: #fffdf3;
+  box-shadow: 0 24px 70px rgba(37,59,121,.2), 0 0 0 1px rgba(110,133,181,.45);
 }
 
 #passcode-card.gate-success-mode > :not(#gate-success) {
@@ -111,7 +111,7 @@
   margin-bottom: .6rem;
   font-size: 3.4rem;
   line-height: 1;
-  filter: drop-shadow(0 5px 4px rgba(39,72,80,.15));
+  filter: drop-shadow(0 5px 4px rgba(37,59,121,.15));
   animation: success-bouquet-pop .65s cubic-bezier(.2,1.5,.35,1) both;
 }
 
@@ -229,7 +229,7 @@
   width: 14px;
   height: 14px;
   border-radius: 9999px;
-  border: 2px solid #fda4af;
+  border: 2px solid #9db9dc;
   background: transparent;
   transition:
     background 0.15s ease,
@@ -238,8 +238,8 @@
 }
 
 .passcode-dot-filled {
-  background: #f43f5e;
-  border-color: #f43f5e;
+  background: #253b79;
+  border-color: #253b79;
   transform: scale(1.05);
 }
 
@@ -254,8 +254,8 @@
   font-family: var(--font-display);
   font-size: 1.35rem;
   font-weight: 600;
-  color: #9f1239;
-  box-shadow: 0 4px 12px rgba(244, 63, 94, 0.12);
+  color: #253b79;
+  box-shadow: 0 4px 12px rgba(37, 59, 121, 0.12);
   backdrop-filter: blur(6px);
   transition:
     background 0.2s ease,
@@ -275,7 +275,7 @@
   outline: none;
   box-shadow:
     0 0 0 2px #ffffff,
-    0 0 0 4px #fb7185;
+    0 0 0 4px #6e85b5;
 }
 
 .bouquet-svg {
@@ -303,7 +303,7 @@
 
 #hero-content > p:first-child {
   margin: 0;
-  color: #b8747b;
+  color: #52688c;
   letter-spacing: .24em;
 }
 
@@ -313,7 +313,7 @@
   font-size: clamp(2rem, 5.7vw, 3.45rem);
   line-height: 1.12;
   text-wrap: balance;
-  color: #bd315d;
+  color: #253b79;
 }
 
 #hero-content h1 span { display: block; }
@@ -343,24 +343,24 @@
 }
 
 #bouquet:focus-visible {
-  outline: 3px solid #d9778d;
+  outline: 3px solid #6e85b5;
   outline-offset: 3px;
 }
 
 #bouquet-hint {
   min-height: 1.5rem;
   margin-top: 1rem;
-  color: #987f79;
+  color: #52688c;
 }
 
 #hero-content > p:last-child {
   margin-top: .8rem;
-  color: #987f79;
+  color: #52688c;
 }
 
 .hero-signoff {
   max-width: 24rem;
-  color: #75614e;
+  color: #52688c;
   line-height: 1.5;
   text-wrap: balance;
 }
@@ -403,12 +403,12 @@
 #gift-row {
   isolation: isolate;
   padding: clamp(0.65rem, 3vw, 1.1rem);
-  border: 1px solid rgba(206, 163, 137, 0.65);
+  border: 1px solid rgba(143, 169, 204, 0.6);
   border-radius: 1.15rem;
   background:
-    linear-gradient(rgba(255, 251, 241, 0.94), rgba(255, 247, 235, 0.94)),
-    repeating-linear-gradient(45deg, #ead9bf 0 1px, transparent 1px 8px);
-  box-shadow: 0 12px 30px rgba(156, 84, 99, 0.13), inset 0 0 0 5px rgba(255, 255, 255, 0.52);
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(244, 248, 253, 0.9)),
+    repeating-linear-gradient(45deg, #dbe6f2 0 1px, transparent 1px 8px);
+  box-shadow: 0 12px 30px rgba(37, 59, 121, 0.12), inset 0 0 0 5px rgba(255, 255, 255, 0.52);
 }
 
 #gift-row::after {
@@ -416,7 +416,7 @@
   position: absolute;
   inset: 0.35rem;
   z-index: -1;
-  border: 1px dashed rgba(190, 143, 119, 0.42);
+  border: 1px dashed rgba(143, 169, 204, 0.45);
   border-radius: 0.85rem;
   pointer-events: none;
 }
@@ -424,7 +424,7 @@
 #bouquet {
   width: 100%;
   max-width: none;
-  filter: drop-shadow(0 8px 10px rgba(129, 82, 72, 0.12));
+  filter: drop-shadow(0 8px 10px rgba(82, 104, 140, 0.14));
 }
 
 .bouquet-art {
@@ -451,16 +451,16 @@
   position: absolute;
   inset: 10% 12% 20%;
   border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(255,255,255,.72), rgba(255,246,238,.2) 54%, transparent 75%);
+  background: radial-gradient(ellipse, rgba(255,255,255,.72), rgba(240,246,253,.25) 54%, transparent 75%);
 }
 
 .art-lace {
   position: absolute;
   inset: 2.5%;
   z-index: 9;
-  border: 6px dotted #edd8c5;
+  border: 6px dotted #c8d8e9;
   border-radius: 1.05rem;
-  box-shadow: inset 0 0 0 2px rgba(255,255,255,.82), 0 0 0 1px rgba(203,166,141,.5);
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,.82), 0 0 0 1px rgba(143,169,204,.5);
   pointer-events: none;
 }
 
@@ -477,7 +477,7 @@
     90deg,
     transparent 43%,
     rgba(255, 255, 255, .08) 47%,
-    rgba(255, 249, 220, .68) 50%,
+    rgba(224, 236, 250, .75) 50%,
     rgba(255, 255, 255, .12) 53%,
     transparent 58%
   );
@@ -486,7 +486,6 @@
 #gift-row.gift-present .bouquet-art::after {
   animation: bouquet-frame-glint 1.35s cubic-bezier(.2,.7,.25,1) .38s both;
 }
-
 #gift-row.gift-holding .art-lace {
   animation: bouquet-lace-glow 3.8s ease-in-out infinite;
 }
@@ -499,10 +498,10 @@
 
 @keyframes bouquet-lace-glow {
   0%, 100% {
-    box-shadow: inset 0 0 0 2px rgba(255,255,255,.82), 0 0 0 1px rgba(203,166,141,.5), 0 0 8px rgba(255,231,174,.16);
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.82), 0 0 0 1px rgba(143,169,204,.5), 0 0 8px rgba(157,185,220,.18);
   }
   50% {
-    box-shadow: inset 0 0 0 2px rgba(255,255,255,.94), 0 0 0 1px rgba(203,166,141,.64), 0 0 18px rgba(255,231,174,.42);
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.94), 0 0 0 1px rgba(143,169,204,.64), 0 0 18px rgba(157,185,220,.45);
   }
 }
 
@@ -535,30 +534,30 @@
 
 /* Botanical palette sampled from bouquet2.svg: vanilla, deep teal, marigold and coral. */
 body.bg-gradient-to-b {
-  background: #fff9e5;
+  background: linear-gradient(180deg, #eaf4fb, #f0f6fc 50%, #e3edf9);
 }
 
 #hero {
   background:
     radial-gradient(ellipse at 8% 18%, rgba(255,255,255,.78), transparent 30%),
-    radial-gradient(ellipse at 92% 30%, rgba(247,156,83,.13), transparent 32%),
-    linear-gradient(180deg, #fff9e5 0%, #fff5df 58%, #f8edda 100%);
+    radial-gradient(ellipse at 92% 30%, rgba(157,185,220,.28), transparent 32%),
+    linear-gradient(180deg, #eaf4fb 0%, #f0f6fc 58%, #e3edf9 100%);
 }
 
 #hero > div:first-child {
-  background-color: rgba(115, 139, 101, .16);
+  background-color: rgba(143, 169, 204, .22);
 }
 
 #hero > div:nth-child(2) {
-  background-color: rgba(224, 72, 25, .12);
+  background-color: rgba(110, 133, 181, .18);
 }
 
 #hero-content > p:first-child {
-  color: #a97837;
+  color: #52688c;
 }
 
 #hero-content h1 {
-  color: #274850;
+  color: #253b79;
 }
 
 #hero-content > p:last-child span {
@@ -570,20 +569,20 @@ body.bg-gradient-to-b {
 }
 
 #passcode-card > .gate-title {
-  color: #274850;
+  color: #253b79;
 }
 
 #passcode-card > .gate-subtitle {
-  color: #78836a;
+  color: #52688c;
 }
 
 .passcode-dot {
-  border-color: #9caf91;
+  border-color: #8fa9cc;
 }
 
 .passcode-dot-filled {
-  background: #315d62;
-  border-color: #315d62;
+  background: #253b79;
+  border-color: #253b79;
 }
 
 .passcode-dot-correct {
@@ -606,62 +605,62 @@ body.bg-gradient-to-b {
 }
 
 .passcode-feedback {
-  color: #738064;
+  color: #52688c;
   transition: color .18s ease, transform .18s ease;
 }
 
 .passcode-feedback[data-state="success"] { color: #4e7a59; }
 .passcode-feedback[data-state="error"] { color: #c4543e; }
-.passcode-feedback[data-state="neutral"] { color: #947b4d; }
+.passcode-feedback[data-state="neutral"] { color: #52688c; }
 
 .key-btn {
-  color: #274850;
-  box-shadow: 0 4px 12px rgba(39,72,80,.12);
+  color: #253b79;
+  box-shadow: 0 4px 12px rgba(37,59,121,.12);
 }
 
 .key-btn:focus-visible {
-  box-shadow: 0 0 0 2px #fff9e5, 0 0 0 4px #d98958;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #6e85b5;
 }
 
 .key-btn-continue {
   display: grid;
   place-items: center;
-  color: #c8b99a;
+  color: #9db9dc;
   transition: color .2s ease, background .2s ease, transform .2s ease, box-shadow .2s ease;
 }
 
 .key-btn-continue:disabled {
   cursor: not-allowed;
   opacity: .68;
-  box-shadow: 0 4px 0 rgba(127,142,108,.12), 0 8px 14px rgba(39,72,80,.04);
+  box-shadow: 0 4px 0 rgba(143,169,204,.16), 0 8px 14px rgba(37,59,121,.05);
 }
 
 .key-btn-continue-ready {
-  color: #fff9e5;
-  border-color: rgba(190,110,67,.7);
-  background: linear-gradient(145deg, #e99561, #cf6a57);
-  box-shadow: 0 4px 0 rgba(155,78,61,.25), 0 8px 16px rgba(195,105,75,.2);
+  color: #fffdf3;
+  border-color: rgba(110,133,181,.85);
+  background: linear-gradient(145deg, #6e85b5, #253b79);
+  box-shadow: 0 4px 0 rgba(30,48,100,.3), 0 8px 16px rgba(37,59,121,.22);
   animation: heart-ready 1.5s ease-in-out infinite;
 }
 
 .key-btn-continue-ready:hover {
-  background: linear-gradient(145deg, #eda16e, #d47762);
-  border-color: rgba(190,110,67,.8);
+  background: linear-gradient(145deg, #7d92c0, #2e4787);
+  border-color: rgba(110,133,181,.95);
 }
 
 @keyframes heart-ready {
-  50% { box-shadow: 0 4px 0 rgba(155,78,61,.2), 0 0 18px rgba(220,135,90,.38); }
+  50% { box-shadow: 0 4px 0 rgba(30,48,100,.24), 0 0 18px rgba(110,133,181,.5); }
 }
 
 .bouquet-art {
-  background: #fff9e5;
+  background: transparent;
 }
 
 #passcode-overlay {
   background:
-    radial-gradient(ellipse at 18% 14%, rgba(220,234,211,.74), transparent 35%),
-    radial-gradient(ellipse at 86% 82%, rgba(244,207,122,.34), transparent 34%),
-    linear-gradient(145deg, #f6f1df, #fff9e5 48%, #f4ead6);
+    radial-gradient(ellipse at 18% 14%, rgba(157,185,220,.6), transparent 35%),
+    radial-gradient(ellipse at 86% 82%, rgba(226,135,152,.16), transparent 34%),
+    linear-gradient(145deg, #eaf4fb, #fffdf3 48%, #e3edf9);
 }
 
 #passcode-overlay::before {
@@ -669,28 +668,28 @@ body.bg-gradient-to-b {
   position: absolute;
   inset: 12px;
   z-index: 0;
-  border: 1px solid rgba(93,122,100,.22);
+  border: 1px solid rgba(110,133,181,.35);
   border-radius: 24px;
   pointer-events: none;
 }
 
 .gate-bg { z-index: 0; }
-.gate-float { background: rgba(76,117,97,.14); }
-.gate-float-blush { background: rgba(226,183,82,.28); }
-.gate-float-glow { background: rgba(255,255,255,.48); }
+.gate-float { background: rgba(110,133,181,.18); }
+.gate-float-blush { background: rgba(226,135,152,.3); }
+.gate-float-glow { background: rgba(255,255,255,.55); }
 
 .gate-card {
   overflow: hidden;
-  border: 1px solid rgba(120,145,109,.52);
-  background: linear-gradient(150deg, rgba(255,253,243,.94), rgba(255,249,229,.91) 62%, rgba(246,239,218,.94));
-  box-shadow: 0 28px 72px rgba(39,72,80,.16), 0 8px 22px rgba(166,128,62,.12), inset 0 1px 0 rgba(255,255,255,.95);
+  border: 1px solid rgba(110,133,181,.55);
+  background: linear-gradient(150deg, rgba(255,255,255,.95), rgba(250,252,255,.92) 62%, rgba(240,246,253,.95));
+  box-shadow: 0 28px 72px rgba(37,59,121,.16), 0 8px 22px rgba(82,104,140,.14), inset 0 1px 0 rgba(255,255,255,.95);
 }
 
 .gate-card::before {
   content: '';
   position: absolute;
   inset: 9px;
-  border: 1px solid rgba(181,151,91,.32);
+  border: 1px solid rgba(200,216,233,.9);
   border-radius: 22px;
   pointer-events: none;
 }
@@ -703,19 +702,19 @@ body.bg-gradient-to-b {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(229,192,96,.15), transparent 70%);
+  background: radial-gradient(circle, rgba(157,185,220,.25), transparent 70%);
   pointer-events: none;
 }
 
 .gate-kicker {
   margin: 0 auto 1.2rem;
-  color: #9c7940;
+  color: #253b79;
   font-size: .62rem;
   font-weight: 700;
   letter-spacing: .18em;
 }
 
-.gate-kicker span { padding-inline: .25rem; color: #d38b4b; }
+.gate-kicker span { padding-inline: .25rem; color: #6e85b5; }
 
 .gate-lock-seal {
   display: grid;
@@ -723,14 +722,14 @@ body.bg-gradient-to-b {
   height: 4.6rem;
   margin-inline: auto;
   place-items: center;
-  border: 1px solid rgba(194,158,83,.58);
+  border: 1px solid rgba(143,169,204,.65);
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 28%, #fffef5, #f4e9ca 75%);
-  box-shadow: 0 7px 18px rgba(120,94,48,.13), inset 0 0 0 4px rgba(255,255,255,.55);
+  background: radial-gradient(circle at 35% 28%, #ffffff, #e8f0fa 75%);
+  box-shadow: 0 7px 18px rgba(82,104,140,.16), inset 0 0 0 4px rgba(255,255,255,.55);
 }
 
-.gate-title { color: #274850; font-weight: 600; }
-.gate-subtitle { color: #78836c; line-height: 1.5; }
+.gate-title { color: #253b79; font-weight: 600; }
+.gate-subtitle { color: #52688c; line-height: 1.5; }
 
 #passcode-dots { margin-top: 1.35rem; gap: .85rem; }
 .passcode-dot { width: 15px; height: 15px; border-width: 1.5px; }
@@ -746,29 +745,29 @@ body.bg-gradient-to-b {
 
 .key-btn {
   min-height: 3.15rem;
-  border: 1px solid rgba(146,157,124,.38);
+  border: 1px solid rgba(143,169,204,.5);
   border-radius: 1rem;
-  background: linear-gradient(155deg, rgba(255,255,251,.96), rgba(246,242,224,.9));
-  color: #31545a;
+  background: linear-gradient(155deg, rgba(255,255,255,.96), rgba(244,248,253,.92));
+  color: #253b79;
   font-family: var(--font-sans);
   font-size: 1.1rem;
-  box-shadow: 0 4px 0 rgba(127,142,108,.2), 0 8px 14px rgba(39,72,80,.07);
+  box-shadow: 0 4px 0 rgba(143,169,204,.28), 0 8px 14px rgba(37,59,121,.08);
   backdrop-filter: blur(5px);
 }
 
 .key-btn:hover {
-  background: linear-gradient(155deg, #fffef8, #f2e8c8);
-  border-color: rgba(193,151,69,.65);
-  box-shadow: 0 5px 0 rgba(183,147,76,.22), 0 10px 18px rgba(39,72,80,.1);
+  background: linear-gradient(155deg, #ffffff, #e8f0fa);
+  border-color: rgba(110,133,181,.7);
+  box-shadow: 0 5px 0 rgba(110,133,181,.24), 0 10px 18px rgba(37,59,121,.1);
   transform: translateY(-1px);
 }
 
 .key-btn:active {
   transform: translateY(2px) scale(.97);
-  box-shadow: 0 1px 0 rgba(127,142,108,.2);
+  box-shadow: 0 1px 0 rgba(143,169,204,.25);
 }
 
-.key-btn:focus-visible { box-shadow: 0 0 0 2px #fff9e5, 0 0 0 4px #d98958; }
+.key-btn:focus-visible { box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #6e85b5; }
 
 body.gift-stage-active::before,
 body.gift-stage-ending::before {
@@ -832,7 +831,7 @@ body.gift-stage-ending #gift-row {
 
 body.gift-stage-active #marquee,
 body.gift-stage-ending #marquee {
-  opacity: .12;
+  opacity: .4;
   transition: opacity .4s ease;
 }
 
@@ -902,11 +901,11 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 }
 
 #card {
-  border-color: #b47b2d;
-  background: linear-gradient(145deg, #ffe47c, #f4c94f 72%, #edb943);
+  border-color: rgba(110,133,181,.65);
+  background: linear-gradient(145deg, #ffffff, #e3edf9);
   box-shadow:
-    0 12px 24px rgba(95, 65, 30, .28),
-    inset 0 0 0 2px rgba(255, 250, 220, .82);
+    0 12px 24px rgba(37, 59, 121, .22),
+    inset 0 0 0 2px rgba(255, 255, 255, .6);
 }
 
 #card svg path:first-child {
@@ -922,11 +921,11 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 }
 
 #card > span[aria-hidden="true"] {
-  background: rgba(130, 95, 39, .23);
+  background: rgba(143, 169, 204, .3);
 }
 
 #card > span:not([aria-hidden]) {
-  color: #274850;
+  color: #253b79;
   font-weight: 700;
 }
 
@@ -954,9 +953,9 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 .bouquet-petal:nth-child(4n + 2) { --petal-width: 6px; }
 .bouquet-petal:nth-child(4n + 3) { --petal-width: 8px; }
 .bouquet-petal-0 { background: #e87573; }
-.bouquet-petal-1 { background: #f3bd45; }
+.bouquet-petal-1 { background: #9db9dc; }
 .bouquet-petal-2 { background: #e89aa3; }
-.bouquet-petal-3 { background: #f39b55; }
+.bouquet-petal-3 { background: #c8d8e9; }
 
 @keyframes bouquet-petal-fall {
   0%, 8% {
@@ -1039,7 +1038,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   content: '';
   position: absolute;
   inset: 0.7rem;
-  border: 1px solid rgba(191,151,123,.55);
+  border: 1px solid rgba(143,169,204,.55);
   border-radius: .65rem;
 }
 
@@ -1185,7 +1184,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   bottom: auto;
   right: 3%;
   width: clamp(5.5rem, 26%, 8rem);
-  background: linear-gradient(145deg, #fffaf0, #f5e2d6);
+  background: linear-gradient(145deg, #ffffff, #e3edf9);
 }
 
 @media (max-width: 420px) {
@@ -1314,7 +1313,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   transform: translateX(-50%);
   font-size: 0.8rem;
   letter-spacing: 0.02em;
-  color: #a3767f;
+  color: #52688c;
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -1403,16 +1402,17 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 .marquee-content {
   padding-inline: 2rem;
   white-space: nowrap;
+  font-weight: 500;
 }
 
-.marquee-static { display: none; }
+.marquee-static { display: none; font-weight: 500; }
 
 #flower-crate {
   padding: 1.25rem 1rem 3rem;
   background:
     radial-gradient(ellipse at 12% 12%, rgba(255,255,255,.9), transparent 35%),
-    radial-gradient(ellipse at 88% 90%, rgba(242,184,145,.22), transparent 38%),
-    linear-gradient(180deg, #fff8e9, #fff0e8);
+    radial-gradient(ellipse at 88% 90%, rgba(157,185,220,.2), transparent 38%),
+    linear-gradient(180deg, #eef5fc, #e3edf9);
 }
 
 .crate-panel {
@@ -1420,15 +1420,15 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   margin-inline: auto;
   padding: clamp(1.1rem, 4vw, 2rem);
   text-align: center;
-  border: 1px solid rgba(194,153,112,.44);
+  border: 1px solid rgba(143,169,204,.5);
   border-radius: 1.75rem;
-  background: rgba(255,253,244,.76);
-  box-shadow: 0 18px 48px rgba(133,83,66,.11), inset 0 0 0 5px rgba(255,255,255,.54);
+  background: rgba(250,253,255,.8);
+  box-shadow: 0 18px 48px rgba(37,59,121,.1), inset 0 0 0 5px rgba(255,255,255,.54);
 }
 
 .crate-kicker {
   margin: 0;
-  color: #bd8756;
+  color: #253b79;
   font-size: .65rem;
   font-weight: 700;
   letter-spacing: .24em;
@@ -1436,7 +1436,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 
 #flower-crate-title {
   margin: .5rem 0 0;
-  color: #31545a;
+  color: #253b79;
   font-size: clamp(1.8rem, 5vw, 2.4rem);
   line-height: 1.15;
 }
@@ -1444,7 +1444,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 .crate-intro {
   max-width: 30rem;
   margin: .5rem auto 1rem;
-  color: #817565;
+  color: #52688c;
   font-size: .9rem;
   line-height: 1.6;
 }
@@ -1456,10 +1456,10 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   overflow: hidden;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(207,170,129,.62);
+  border: 1px solid rgba(143,169,204,.55);
   border-radius: 1.25rem;
-  background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(250,237,218,.75));
-  box-shadow: inset 0 0 0 4px rgba(255,255,255,.66), inset 0 0 24px rgba(184,140,87,.08);
+  background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(240,246,253,.75));
+  box-shadow: inset 0 0 0 4px rgba(255,255,255,.66), inset 0 0 24px rgba(82,104,140,.08);
 }
 
 .crate-window::after {
@@ -1467,7 +1467,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, rgba(255,250,239,.88), transparent 15%, transparent 85%, rgba(255,250,239,.88));
+  background: linear-gradient(90deg, rgba(255,255,255,.85), transparent 15%, transparent 85%, rgba(255,255,255,.85));
 }
 
 .crate-pointer {
@@ -1478,10 +1478,10 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   width: 0;
   height: 0;
   transform: translateX(-50%);
-  border-top: 12px solid #c76c6c;
+  border-top: 12px solid #253b79;
   border-right: 9px solid transparent;
   border-left: 9px solid transparent;
-  filter: drop-shadow(0 2px 2px rgba(112,67,51,.22));
+  filter: drop-shadow(0 2px 2px rgba(37,59,121,.2));
 }
 
 .crate-track {
@@ -1502,14 +1502,14 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   justify-content: center;
   gap: .45rem;
   padding: .55rem;
-  border: 1px solid rgba(201,161,118,.52);
+  border: 1px solid rgba(143,169,204,.5);
   border-radius: .9rem;
-  background: linear-gradient(145deg, #fffdf6, #f7ecd9);
-  box-shadow: 0 5px 12px rgba(133,83,66,.09), inset 0 1px 0 white;
+  background: linear-gradient(145deg, #ffffff, #f0f6fc);
+  box-shadow: 0 5px 12px rgba(37,59,121,.08), inset 0 1px 0 white;
 }
 
 .crate-item-flower { font-size: 2rem; line-height: 1; }
-.crate-item-name { color: #796d5e; font-size: .65rem; line-height: 1.2; }
+.crate-item-name { color: #52688c; font-size: .65rem; line-height: 1.2; }
 
 .crate-result {
   display: flex;
@@ -1519,16 +1519,16 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   gap: .85rem;
   margin: .8rem auto 0;
   padding: .65rem .85rem;
-  border: 1px solid rgba(222,174,135,.48);
+  border: 1px solid rgba(143,169,204,.45);
   border-radius: 1rem;
-  background: linear-gradient(110deg, rgba(255,247,230,.94), rgba(255,235,229,.92));
+  background: linear-gradient(110deg, rgba(250,253,255,.94), rgba(240,246,253,.92));
   text-align: left;
 }
 
 .crate-result[hidden] { display: none; }
 .crate-result-flower { font-size: 2.4rem; line-height: 1; }
-.crate-result-name { margin: 0; color: #a9575d; font-weight: 700; }
-.crate-result-wish { margin: .2rem 0 0; color: #756c5e; font-size: .8rem; line-height: 1.45; }
+.crate-result-name { margin: 0; color: #253b79; font-weight: 700; }
+.crate-result-wish { margin: .2rem 0 0; color: #52688c; font-size: .8rem; line-height: 1.45; }
 .crate-result-show { animation: crate-result-pop .5s cubic-bezier(.2,1.25,.35,1) both; }
 
 @keyframes crate-result-pop {
@@ -1544,31 +1544,31 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   gap: .5rem;
   margin-top: .9rem;
   padding: .7rem 1.4rem;
-  border: 1px solid rgba(180,93,78,.45);
+  border: 1px solid rgba(110,133,181,.7);
   border-radius: 999px;
-  background: linear-gradient(135deg, #d87567, #c85a68);
-  color: #fffaf0;
+  background: linear-gradient(135deg, #6e85b5, #253b79);
+  color: #fffdf3;
   font-size: .9rem;
   font-weight: 700;
-  box-shadow: 0 7px 18px rgba(172,85,82,.22);
+  box-shadow: 0 7px 18px rgba(37,59,121,.22);
   transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
 }
 
-.crate-open:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(172,85,82,.28); }
+.crate-open:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(37,59,121,.28); }
 .crate-open:active:not(:disabled) { transform: translateY(1px) scale(.98); }
 .crate-open:disabled { cursor: wait; opacity: .72; }
-.crate-open:focus-visible { outline: 3px solid #d9a45b; outline-offset: 3px; }
-.crate-note { margin: .55rem 0 0; color: #9b8c77; font-size: .72rem; }
+.crate-open:focus-visible { outline: 3px solid #6e85b5; outline-offset: 3px; }
+.crate-note { margin: .55rem 0 0; color: #52688c; font-size: .72rem; }
 
 #site-footer {
   padding: 1.25rem 1rem 5rem;
-  border-top: 1px solid rgba(194,153,112,.28);
-  background: linear-gradient(180deg, #fff1e8, #fce8ed);
+  border-top: 1px solid rgba(143,169,204,.35);
+  background: linear-gradient(180deg, #eef5fc, #e3edf9);
   text-align: center;
 }
 
 .site-footer-inner { width: min(100%, 42rem); margin-inline: auto; }
-.footer-credit { display: flex; align-items: center; justify-content: center; gap: .5rem; color: #756e63; font-size: .75rem; letter-spacing: .025em; }
+.footer-credit { display: flex; align-items: center; justify-content: center; gap: .5rem; color: #52688c; font-size: .75rem; letter-spacing: .025em; }
 #site-footer .hero-signoff { margin-top: .35rem; font-size: .8rem; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1732,7 +1732,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   }
 }
 
-/* Keep a single visible frame around the bouquet artwork. */
+/* Keep a single visible frame around the bouquet artwork in the logo's cool palette. */
 #gift-row {
   padding: 0;
   background: transparent;
@@ -1744,9 +1744,14 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 #gift-row::after { content: none; }
 
 .bouquet-art {
+  border: 1px solid #b6cce4;
   border-radius: 1rem;
-  background: #fff8e8;
-  box-shadow: inset 0 0 0 2px #f4e7d5, inset 0 0 0 7px rgba(255,255,255,.54);
+  background:
+    radial-gradient(ellipse at 50% 43%, rgba(255,255,255,.98) 0%, rgba(255,255,255,.72) 32%, transparent 68%),
+    radial-gradient(circle at 14% 16%, rgba(111,158,211,.24), transparent 34%),
+    radial-gradient(circle at 88% 84%, rgba(126,164,210,.22), transparent 38%),
+    linear-gradient(145deg, #d0e3f6 0%, #f8fbff 52%, #d4e5f6 100%);
+  box-shadow: inset 0 0 0 6px rgba(255,255,255,.66), 0 16px 32px rgba(51,91,139,.22);
 }
 
 #card {
@@ -1758,4 +1763,34 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 @media (max-width: 520px) {
   #gift-row { padding: 0; }
   #card { top: auto; right: 4%; bottom: 6%; }
+}
+
+
+/* Extra stationery details for the passcode card. */
+.gate-card::before {
+  background:
+    radial-gradient(circle, rgba(110,133,181,.7) 0 2.5px, transparent 3px) top left / 14px 14px no-repeat,
+    radial-gradient(circle, rgba(110,133,181,.7) 0 2.5px, transparent 3px) top right / 14px 14px no-repeat,
+    radial-gradient(circle, rgba(110,133,181,.7) 0 2.5px, transparent 3px) bottom left / 14px 14px no-repeat,
+    radial-gradient(circle, rgba(110,133,181,.7) 0 2.5px, transparent 3px) bottom right / 14px 14px no-repeat;
+}
+
+.gate-kicker::after {
+  content: '✿  ·  ✦  ·  ✿';
+  display: block;
+  margin: .65rem auto -.35rem;
+  color: #829cc1;
+  font-size: .72rem;
+  letter-spacing: .18em;
+}
+
+.gate-lock-seal { position: relative; }
+
+.gate-lock-seal::before {
+  content: '';
+  position: absolute;
+  inset: -7px;
+  border: 1px solid rgba(143,169,204,.4);
+  border-radius: 50%;
+  pointer-events: none;
 }

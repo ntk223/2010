@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chúc mừng ngày Phụ nữ Việt Nam 20/10</title>
   <meta name="description" content="Một tấm thiệp nhỏ gửi ngàn yêu thương đến tất cả phụ nữ nhân ngày 20/10." />
+  <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
+  <link rel="apple-touch-icon" href="/images/logo.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Thiệp 20/10" />
+  <meta property="og:title" content="Chúc mừng ngày Phụ nữ Việt Nam 20/10" />
+  <meta property="og:description" content="Một tấm thiệp nhỏ gửi ngàn yêu thương đến tất cả phụ nữ nhân ngày 20/10." />
+  <meta property="og:url" content="https://ntk223.github.io/2010/" />
+  <meta property="og:image" content="https://ntk223.github.io/2010/images/logo.jpg" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1080" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chúc mừng ngày Phụ nữ Việt Nam 20/10" />
+  <meta name="twitter:image" content="https://ntk223.github.io/2010/images/logo.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -13,9 +27,9 @@
     rel="stylesheet" />
 </head>
 
-<body class="min-h-screen bg-gradient-to-b from-rose-50 via-pink-50 to-rose-100 font-sans text-stone-800 antialiased">
+<body class="min-h-screen bg-gradient-to-b from-[#eaf4fb] via-[#f0f6fc] to-[#e3edf9] font-sans text-stone-800 antialiased">
   <div id="passcode-overlay" role="dialog" aria-modal="true" aria-label="Nhập mật khẩu để mở thiệp"
-    class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 overflow-hidden bg-gradient-to-br from-rose-100 via-pink-100 to-amber-50 px-4 text-center">
+    class="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 overflow-hidden bg-gradient-to-br from-[#eaf4fb] via-[#f4f8fd] to-[#fffdf3] px-4 text-center">
     <div class="gate-bg pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
       <span class="gate-float" style="--x: 6%; --s: 18px; --d: 17s; --delay: -3s; --o: 0.55; --rot: 42deg"></span>
       <span class="gate-float gate-float-blush"
@@ -44,8 +58,8 @@
         <svg viewBox="0 0 48 48" class="h-11 w-11">
           <defs>
             <linearGradient id="lockGrad" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#e7b94b" />
-              <stop offset="1" stop-color="#d8794c" />
+              <stop offset="0" stop-color="#253b79" />
+              <stop offset="1" stop-color="#6e85b5" />
             </linearGradient>
           </defs>
           <path d="M16 20v-5a8 8 0 0 1 16 0v5" fill="none" stroke="url(#lockGrad)" stroke-width="3"
@@ -93,16 +107,16 @@
       </div>
       <div id="gate-success" class="hidden" role="status" aria-live="assertive" tabindex="-1">
         <span class="gate-success-bouquet" aria-hidden="true">💐</span>
-        <p class="font-display text-2xl font-semibold text-[#274850] sm:text-3xl">Mật mã chính xác!</p>
-        <p class="mt-2 text-sm text-[#748064] sm:text-base">Chúc mừng! Món quà yêu thương đang mở ra ✨</p>
+        <p class="font-display text-2xl font-semibold text-[#253b79] sm:text-3xl">Mật mã chính xác!</p>
+        <p class="mt-2 text-sm text-[#52688c] sm:text-base">Chúc mừng! Món quà yêu thương đang mở ra ✨</p>
       </div>
     </div>
   </div>
 
   <header id="hero" class="relative overflow-hidden">
-    <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-pink-300/40 blur-3xl"
+    <div class="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[#9db9dc]/40 blur-3xl"
       aria-hidden="true"></div>
-    <div class="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-rose-300/40 blur-3xl"
+    <div class="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-[#c8d8e9]/40 blur-3xl"
       aria-hidden="true"></div>
     <div id="hero-content"
       class="relative z-10 mx-auto flex min-h-[85vh] max-w-3xl flex-col items-center justify-center px-4 pb-24 pt-20 text-center sm:min-h-screen">
@@ -167,13 +181,19 @@
   <footer id="site-footer">
     <div class="site-footer-inner">
       <div class="footer-credit">
-        <svg viewBox="0 0 32 20" class="h-5 w-7 text-[#879778] opacity-75" aria-hidden="true" fill="none"
+        <svg viewBox="0 0 32 20" class="h-5 w-7 text-[#8fa9cc] opacity-80" aria-hidden="true" fill="none"
           stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
           <path d="M2 17C9 15 13 10 19 3" stroke-width="1.2" />
           <path d="M6 14C4 10 5 8 8 8c1 3 0 5-2 6ZM11 10C9 6 10 4 13 4c1 3 0 5-2 6ZM15 6c0-3 2-5 5-4-1 3-2 4-5 4Z"
             fill="currentColor" stroke-width=".7" />
         </svg>
-        <span>created by <span class="text-rose-400">@NTK</span> &lt;3</span>
+        <span>
+          created by
+          <a href="https://www.instagram.com/ntki.env/" target="_blank" rel="noopener" class="text-rose-700 hover:underline">@NTK</a>
+          &amp;
+          <a href="https://www.instagram.com/psy.bloomie/" target="_blank" rel="noopener" class="text-[#253b79] hover:underline">@PSY.BLOOMIE</a>
+          &lt;3
+        </span>
         <button id="share-btn" type="button" aria-label="Chia sẻ thiệp" title="Chia sẻ thiệp"
           class="inline-flex h-8 w-8 items-center justify-center rounded-full text-rose-400 transition hover:text-rose-600 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2">
           <svg viewBox="0 0 24 24" class="h-[18px] w-[18px]" fill="none" stroke="currentColor"
@@ -184,7 +204,7 @@
             <path d="m8.7 10.7 6.6-4.4M8.7 13.3l6.6 4.4" />
           </svg>
         </button>
-        <svg viewBox="0 0 32 20" class="h-5 w-7 -scale-x-100 text-[#879778] opacity-75" aria-hidden="true"
+        <svg viewBox="0 0 32 20" class="h-5 w-7 -scale-x-100 text-[#8fa9cc] opacity-80" aria-hidden="true"
           fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
           <path d="M2 17C9 15 13 10 19 3" stroke-width="1.2" />
           <path d="M6 14C4 10 5 8 8 8c1 3 0 5-2 6ZM11 10C9 6 10 4 13 4c1 3 0 5-2 6ZM15 6c0-3 2-5 5-4-1 3-2 4-5 4Z"
@@ -196,23 +216,23 @@
   </footer>
 
   <div id="card-modal" role="dialog" aria-modal="true" aria-label="Thiệp lời chúc"
-    class="fixed inset-0 z-50 hidden items-center justify-center bg-stone-900/50 p-4 backdrop-blur-sm">
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-[#1c2547]/55 p-4 backdrop-blur-sm">
     <div class="relative w-full max-w-md">
       <button id="card-close" type="button" aria-label="Đóng thiệp"
-        class="absolute -right-2 -top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl text-stone-600 shadow-md transition hover:bg-[#eef2e8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#638078]">
+        class="absolute -right-2 -top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white text-xl text-stone-600 shadow-md transition hover:bg-[#e8f0fa] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6e85b5]">
         ×
       </button>
       <div
-        class="card-sheet relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#fff9e5] via-[#fffdf5] to-[#f5ecd8] shadow-2xl ring-1 ring-[#9cac91]">
-        <div aria-hidden="true" class="pointer-events-none absolute inset-2 rounded-xl border border-[#b9c3a5]"></div>
-        <svg viewBox="0 0 40 40" class="pointer-events-none absolute left-2 top-2 h-8 w-8 text-[#b28a43]"
+        class="card-sheet relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#fff9e5] via-[#fffdf5] to-[#f5ecd8] shadow-2xl ring-1 ring-[#8fa9cc]">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-2 rounded-xl border border-[#c8d8e9]"></div>
+        <svg viewBox="0 0 40 40" class="pointer-events-none absolute left-2 top-2 h-8 w-8 text-[#8fa9cc]"
           aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round">
           <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
           <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
           <path d="M12 15 C 14 12 18 12 20 15" stroke-width="1.2" opacity="0.7" />
           <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
         </svg>
-        <svg viewBox="0 0 40 40" class="pointer-events-none absolute right-2 top-2 h-8 w-8 -scale-x-100 text-[#b28a43]"
+        <svg viewBox="0 0 40 40" class="pointer-events-none absolute right-2 top-2 h-8 w-8 -scale-x-100 text-[#8fa9cc]"
           aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round">
           <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
           <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
@@ -220,14 +240,14 @@
           <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
         </svg>
         <svg viewBox="0 0 40 40"
-          class="pointer-events-none absolute bottom-2 left-2 h-8 w-8 -scale-y-100 text-[#b28a43]" aria-hidden="true"
+          class="pointer-events-none absolute bottom-2 left-2 h-8 w-8 -scale-y-100 text-[#8fa9cc]" aria-hidden="true"
           fill="none" stroke="currentColor" stroke-linecap="round">
           <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
           <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
           <path d="M12 15 C 14 12 18 12 20 15" stroke-width="1.2" opacity="0.7" />
           <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
         </svg>
-        <svg viewBox="0 0 40 40" class="pointer-events-none absolute bottom-2 right-2 h-8 w-8 -scale-100 text-[#b28a43]"
+        <svg viewBox="0 0 40 40" class="pointer-events-none absolute bottom-2 right-2 h-8 w-8 -scale-100 text-[#8fa9cc]"
           aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round">
           <path d="M3 24 C 3 11 11 3 24 3" stroke-width="1.5" />
           <path d="M7 29 C 7 16 16 7 29 7" stroke-width="1" opacity="0.55" />
@@ -235,10 +255,10 @@
           <circle cx="16" cy="20" r="1.3" fill="currentColor" stroke="none" />
         </svg>
         <div class="relative px-6 py-10 sm:px-10">
-          <p class="font-display text-xl text-[#274850] sm:text-2xl">
+          <p class="font-display text-xl text-[#253b79] sm:text-2xl">
             Nhân ngày Phụ nữ Việt Nam 20/10
           </p>
-          <svg viewBox="0 0 120 12" class="mx-auto my-4 h-3 w-28 text-[#d28a42]" aria-hidden="true" fill="none"
+          <svg viewBox="0 0 120 12" class="mx-auto my-4 h-3 w-28 text-[#6e85b5]" aria-hidden="true" fill="none"
             stroke="currentColor">
             <path d="M2 6 H 48" stroke-width="1" opacity="0.55" />
             <path d="M72 6 H 118" stroke-width="1" opacity="0.55" />
@@ -247,7 +267,7 @@
               fill="currentColor" stroke="none" />
           </svg>
           <p id="card-text" aria-live="polite"
-            class="min-h-40 text-left text-[15px] leading-relaxed text-[#59675b] sm:text-base"></p>
+            class="min-h-40 text-left text-[15px] leading-relaxed text-[#52688c] sm:text-base"></p>
         </div>
       </div>
     </div>
@@ -256,7 +276,7 @@
   <p id="gift-hint" class="gift-hint">Chạm ra ngoài để mở thiệp 🌸</p>
 
   <div id="marquee" role="marquee" aria-label="Lời chúc ngày Phụ nữ Việt Nam"
-    class="fixed inset-x-0 bottom-0 z-40 overflow-hidden border-t border-white/40 bg-rose-500 py-2 text-xs text-white shadow-[0_-2px_12px_rgba(219,39,119,0.35)]">
+    class="fixed inset-x-0 bottom-0 z-40 overflow-hidden border-t border-white/40 bg-[#253b79] py-2 text-sm text-white shadow-[0_-2px_12px_rgba(30,48,100,0.35)]">
     <p class="marquee-static" aria-hidden="true">Chúc bạn vui vẻ, bình an và hạnh phúc 🌷</p>
     <div class="marquee-track" aria-hidden="true">
       <span class="marquee-content">Chúc mừng ngày Phụ nữ Việt Nam 20/10 🌸 Yêu thương 💕 Hạnh phúc 🌷 Bình an ✨</span>
@@ -265,7 +285,7 @@
   </div>
 
   <div id="toast" role="status" aria-live="polite"
-    class="fixed bottom-14 left-1/2 z-50 rounded-full bg-stone-800 px-5 py-2.5 text-sm text-white shadow-lg">
+    class="fixed bottom-14 left-1/2 z-50 rounded-full bg-[#253b79] px-5 py-2.5 text-sm text-white shadow-lg">
     Đã sao chép liên kết!
   </div>
 

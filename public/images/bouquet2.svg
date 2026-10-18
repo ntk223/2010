@@ -3,7 +3,7 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1200 800" style="enable-background:new 0 0 1200 800;" xml:space="preserve">
 <g id="Background">
-	<rect style="fill:#FFF9E5;" width="1200" height="800"/>
+	<rect style="fill:none;" width="1200" height="800"/>
 </g>
 <g id="Graphic_elements">
 	<path style="fill:#F79C53;" d="M606.253,664.298c-1.932-5.612-5.8-9.329-11.705-9.91c-8.756-0.862-17.438-0.015-25.823,2.93
