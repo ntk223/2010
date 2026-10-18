@@ -1837,3 +1837,17 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   .footer-credit #share-btn { width: 1.35rem; height: 1.35rem; flex-basis: 1.35rem; }
   .footer-credit #share-btn svg { width: 13px; height: 13px; }
 }
+
+
+.ntk-note-wrap { position: relative; display: inline-flex; align-items: baseline; }
+.ntk-note-trigger { border: 0; padding: 0; background: transparent; color: #be123c; font: inherit; cursor: pointer; }
+.ntk-note-trigger:focus-visible { border-radius: .2rem; outline: 2px solid #8fa9cc; outline-offset: 2px; }
+.ntk-note:not([hidden]) {
+  position: absolute; z-index: 20; left: 50%; bottom: calc(100% + .55rem);
+  display: block; padding: .38rem .62rem; border: 1px solid rgba(143,169,204,.55);
+  border-radius: .65rem; background: #fff; color: #253b79;
+  box-shadow: 0 8px 20px rgba(37,59,121,.16); font-size: .72rem;
+  font-weight: 600; white-space: nowrap; transform: translateX(-50%);
+  animation: ntk-note-pop .18s ease-out both;
+}
+@keyframes ntk-note-pop { from { opacity: 0; translate: 0 4px; } to { opacity: 1; translate: 0 0; } }

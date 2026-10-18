@@ -6,6 +6,7 @@ import { initBouquetTouch } from './js/bouquet-touch.js';
 import { initGiftEntrance } from './js/gift-entrance.js';
 import { initCard } from './js/card.js';
 import { initShare } from './js/share.js';
+import { initNtkNote } from './js/ntk-note.js';
 import { initPasscode } from './js/passcode.js';
 import { initFlowerCrate } from './js/flower-crate.js';
 
@@ -16,6 +17,7 @@ function boot() {
   const giftEntrance = initGiftEntrance();
   initCard();
   initShare();
+  initNtkNote();
   initFlowerCrate();
   initPasscode(() => {
     const hero = document.getElementById('hero');
