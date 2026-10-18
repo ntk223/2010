@@ -1794,3 +1794,46 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
   border-radius: 50%;
   pointer-events: none;
 }
+
+/* Keep the crate heading and footer credit on one line on narrow phones. */
+@media (max-width: 390px) {
+  #flower-crate-title {
+    font-size: clamp(1.25rem, 6.3vw, 1.6rem);
+    letter-spacing: -.02em;
+    white-space: nowrap;
+  }
+
+  #site-footer { padding-inline: .7rem; }
+
+  .footer-credit {
+    flex-wrap: nowrap;
+    gap: .22rem;
+    white-space: nowrap;
+    font-size: clamp(.6rem, 2.8vw, .67rem);
+    letter-spacing: .01em;
+  }
+
+  .footer-credit > span { white-space: nowrap; }
+
+  .footer-credit > svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex: 0 0 1.1rem;
+  }
+
+  .footer-credit #share-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+    flex: 0 0 1.5rem;
+    padding: 0;
+  }
+
+  .footer-credit #share-btn svg { width: 15px; height: 15px; }
+}
+
+@media (max-width: 330px) {
+  .footer-credit { gap: .16rem; font-size: .58rem; }
+  .footer-credit > svg { width: 1rem; height: 1rem; flex-basis: 1rem; }
+  .footer-credit #share-btn { width: 1.35rem; height: 1.35rem; flex-basis: 1.35rem; }
+  .footer-credit #share-btn svg { width: 13px; height: 13px; }
+}
