@@ -1758,15 +1758,140 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 
 #card {
   top: auto;
-  right: calc(5% + 20px);
+  right: calc(5% + 5px);
   bottom: 6%;
+  transform-origin: center;
+  animation: card-rock 3.2s ease-in-out infinite;
 }
 
 @media (max-width: 520px) {
   #gift-row { padding: 0; }
-  #card { top: auto; right: calc(4% + 20px); bottom: 6%; }
+  #card { top: auto; right: calc(4% + 5px); bottom: 6%; }
 }
 
+@keyframes card-rock {
+  0%, 100% { rotate: 0deg; }
+  25% { rotate: 10deg; }
+  50% { rotate: 0deg; }
+  75% { rotate: -10deg; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #card { animation: none; }
+}
+
+/* A sealed envelope teaser for the greeting card. */
+#card {
+  position: absolute;
+  display: flex;
+  width: clamp(6.5rem, 30%, 8rem);
+  height: 4.65rem;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: .5rem;
+  border: 1px solid #bdcde0;
+  border-radius: .5rem;
+  background: linear-gradient(145deg, #f5f9ff, #dce8f5);
+  box-shadow: 0 9px 18px rgba(54, 67, 89, .2), inset 0 0 0 1px rgba(255,255,255,.85);
+  text-align: center;
+}
+
+#card::before {
+  position: absolute;
+  z-index: 0;
+  inset: 4px;
+  border: 1px solid rgba(125, 155, 190, .48);
+  border-radius: .34rem;
+  content: '';
+  pointer-events: none;
+}
+
+#card::after {
+  position: absolute;
+  z-index: 0;
+  top: 4px;
+  left: 4px;
+  width: calc(100% - 8px);
+  height: 55%;
+  background: linear-gradient(160deg, #e7eff8, #d2e0ef);
+  clip-path: polygon(0 0, 100% 0, 50% 78%);
+  filter: drop-shadow(0 1px 1px rgba(77, 106, 141, .28));
+  content: '';
+  pointer-events: none;
+}
+
+#card > span[aria-hidden="true"] {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+#card > span.letter-card-heading {
+  position: absolute;
+  z-index: 2 !important;
+  right: 0;
+  bottom: .46rem;
+  left: 0;
+  color: #536d89;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: .45rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+#card > span.letter-card-seal {
+  position: absolute;
+  z-index: 2;
+  top: 42%;
+  left: 50%;
+  display: grid;
+  width: 1.4rem;
+  height: 1.4rem;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff0f4, #e9aab9 70%, #c87991);
+  box-shadow: 0 2px 5px rgba(94, 59, 90, .28), inset 0 0 0 2px rgba(255,255,255,.55);
+  transform: translate(-50%, -50%);
+}
+
+#card .letter-card-seal svg {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+#card .letter-card-seal svg path:first-child { fill: #cf8798; }
+#card .letter-card-seal svg circle { fill: #af6379; }
+#card .letter-card-seal svg path:nth-of-type(2) { fill: #fff7ed; }
+
+#card > span.letter-envelope-folds {
+  position: absolute;
+  z-index: 1;
+  inset: 43% 4px 4px;
+  background:
+    linear-gradient(30deg, transparent 49.2%, rgba(117, 147, 181, .52) 50%, transparent 50.8%) left bottom / 51% 100% no-repeat,
+    linear-gradient(-30deg, transparent 49.2%, rgba(117, 147, 181, .52) 50%, transparent 50.8%) right bottom / 51% 100% no-repeat;
+  pointer-events: none;
+}
+
+#card > span.letter-card-date {
+  position: absolute;
+  z-index: 2;
+  right: .48rem;
+  bottom: .35rem;
+  padding: .08rem .25rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.68);
+  color: #647f9d;
+  font-size: .42rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
 
 /* Extra stationery details for the passcode card. */
 .gate-card::before {
