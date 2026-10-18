@@ -525,7 +525,7 @@
   top: auto;
   right: 5%;
   bottom: 6%;
-  scale: .85;
+  scale: .7225;
   transform-origin: bottom right;
 }
 
@@ -1411,6 +1411,7 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 
 #flower-crate {
   padding: 1.25rem 1rem 3rem;
+  margin-bottom: 1.25rem;
   background:
     radial-gradient(ellipse at 12% 12%, rgba(255,255,255,.9), transparent 35%),
     radial-gradient(ellipse at 88% 90%, rgba(157,185,220,.2), transparent 38%),
@@ -1758,15 +1759,15 @@ body.gift-stage-active #card-modal .card-sheet > .relative > p:first-child {
 
 #card {
   top: auto;
-  right: calc(5% + 5px);
-  bottom: 6%;
+  right: 5%;
+  bottom: calc(6% - 5px);
   transform-origin: center;
   animation: card-rock 3.2s ease-in-out infinite;
 }
 
 @media (max-width: 520px) {
   #gift-row { padding: 0; }
-  #card { top: auto; right: calc(4% + 5px); bottom: 6%; }
+  #card { top: auto; right: 4%; bottom: calc(6% - 5px); }
 }
 
 @keyframes card-rock {
